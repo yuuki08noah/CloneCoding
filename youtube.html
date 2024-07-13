@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Music</title>
+    <link rel="icon" type="image/x-icon" href="source/youtubeIcon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="section">
+        <img id="taylor" src="source/taylorswift.png">
+        <div id="gradient"></div>
+        <div id="text">
+            <h1>Taylor Swift</h1>
+            <br>
+            <p id="detail">
+                테일러 앨리슨 스위프트는 미국의 싱어송라이터, 배우, 감독이다. 스위프트는 펜실베이니아주 레딩에서 태어나 12살부터 컨트리 음악 경력을 추구하기 위해 테네시주 내슈빌로 떠났다. 이후 인디
+                레이블 빅 머신 레코드와 계약을 체결했고, 소니/ATV 뮤직 퍼블리싱에서 젊은 작곡가로 활동했다. 2006년에는 데뷔 음반 Taylor Swift를 발매하면서 컨트리 음악 스타로 인정받게
+                된다. 음반의 세 번째 싱글이었던 "Our Song"은 자기가 작곡한 노래를 컨트리 차트 1위에 올린 가장 젊은 가수라는 기록을 세웠다. 2008년 열린 그래미 상에서는 최우수 신인상
+                후보에 올랐다. 2010년에 이어 2016년 그래미 상 올해의 앨범상을 받음으로써, 올해의 앨범상을 2번 탄 최초의 가수가 되었다. 2017년 타임 올해의 인물로 선정된 "침묵을 깬
+                사람들"의 일원으로 타임 커버를 장식했다.
+                2008년 스위프트의 두 번째 정규 음반 Fearless가 발매되었다. 팝적인 느낌이 나는 음반의 첫 번째와 세 번째 싱글 "Love Story"와 "You Belong with Me"는
+                각각 빌보드 핫 100에서 4위와 2위까지 오르면서 성공을 거뒀다. Fearless는 2009년 미국에서 가장 많이 판매된 음반이었고, 현재까지 600만 장 이상이 팔리고 있다. 이
+                음반으로 2009 그래미 상에서 최연소로 올해의 앨범을 수상을 비롯해 4개 부문 수상을 했다. 2010년에는 세 번째 정규 음반 Speak Now가 발매 해 첫 주 1,047,000만
+                장을 팔았다. Speak Now는 세계적으로 500만 장 이상이 팔리며 성공을 거뒀고, 세 번째 싱글이었던 "Mean"으로 그래미 상 두 개 부문을 수상했다. 2012년에는 네 번째 정규
+                앨범 Red를 발매 해 첫 주 120만 장을 팔았다. 스위프트는 발매 첫 주 100만 장을 판 두 장의 음반을 보유한 첫 여자 가수가 되었다. 첫 싱글 "We Are Never Ever
+                Getting Back Together"는 처음으로 빌보드 핫 100 1위를 했고 다음 싱글 "I Knew You Were Trouble
+            </p>
+            <p id="reduce" onclick="reduce()">간략히보기</p>
+            <p id="moreinfo" onclick="detail()">더보기</p>
+            <div id="buttons">
+                <div id="shuffle">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                        class="style-scope yt-icon">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M18.15,13.65l3.85,3.85l-3.85,3.85l-0.71-0.71L20.09,18H19c-2.84,0-5.53-1.23-7.39-3.38l0.76-0.65 C14.03,15.89,16.45,17,19,17h1.09l-2.65-2.65L18.15,13.65z M19,7h1.09l-2.65,2.65l0.71,0.71l3.85-3.85l-3.85-3.85l-0.71,0.71 L20.09,6H19c-3.58,0-6.86,1.95-8.57,5.09l-0.73,1.34C8.16,15.25,5.21,17,2,17v1c3.58,0,6.86-1.95,8.57-5.09l0.73-1.34 C12.84,8.75,15.79,7,19,7z M8.59,9.98l0.75-0.66C7.49,7.21,4.81,6,2,6v1C4.52,7,6.92,8.09,8.59,9.98z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                    <span>셔플</span>
+                </div>
+
+                <div id="musicstation">
+                    <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        style="pointer-events: none; display: block; width: 24px; height: 24px;"
+                        class="style-scope yt-icon">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M10.5,14.41V9.6l4.17,2.4L10.5,14.41z M8.48,8.45L7.77,7.75C6.68,8.83,6,10.34,6,12s0.68,3.17,1.77,4.25l0.71-0.71 C7.57,14.64,7,13.39,7,12S7.57,9.36,8.48,8.45z M16.23,7.75l-0.71,0.71C16.43,9.36,17,10.61,17,12s-0.57,2.64-1.48,3.55l0.71,0.71 C17.32,15.17,18,13.66,18,12S17.32,8.83,16.23,7.75z M5.65,5.63L4.95,4.92C3.13,6.73,2,9.24,2,12s1.13,5.27,2.95,7.08l0.71-0.71 C4.02,16.74,3,14.49,3,12S4.02,7.26,5.65,5.63z M19.05,4.92l-0.71,0.71C19.98,7.26,21,9.51,21,12s-1.02,4.74-2.65,6.37l0.71,0.71 C20.87,17.27,22,14.76,22,12S20.87,6.73,19.05,4.92z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                    <span>뮤직 스테이션</span>
+                </div>
+                <div id="follow">
+                    <span>구독중 5940만</span>
+                </div>
+                <div id="moretoshare">
+                    <img src="source/verticaldots.png">
+                </div>
+                <div id="contents" style="color: white;">
+                    <h2>노래</h2>
+                    <br>
+                    <div class="songs">
+                        <img id="img" draggable="false" class="style-scope yt-img-shadow" alt="" width="56"
+                            src="https://lh3.googleusercontent.com/GcrDhHXqrPm4BjS-4L1c0OHC9iz0ZxmFeRur2A6Aqo9Vm7OfFCBOSVbRzp1M1D1s_3rsvKaC7w6kku0=w120-h120-l90-rj">
+                        <a class="img">
+                            <img id="playbut" src="source/playbutton.png">
+                        </a>
+                        <span class="title">
+                            Blank Space
+                        </span>
+                        <span class="grey">
+                            Taylor Swift
+                        </span>
+                        <span class="grey">
+                            39억회 재생
+                        </span>
+                        <span class="grey">
+                            1989 (Deluxe)
+                        </span>
+                        <span class="lhv">
+                            <span class="tired" id="hate">
+                                <img src="source/hate.png">
+                            </span>
+                            <span class="tired" id="like">
+                                <img src="source/like.png">
+                            </span>
+                            <span class="tired" id="vd">
+                                <img src="source/verticaldots.png">
+                            </span>
+                        </span>
+                        <span class="year">
+                            2014
+                        </span>
+                    </div>
+                    <hr class="between">
+                    <div class="songs">
+                        <img id="img" draggable="false" class="style-scope yt-img-shadow" alt="" width="56"
+                            src="https://lh3.googleusercontent.com/GcrDhHXqrPm4BjS-4L1c0OHC9iz0ZxmFeRur2A6Aqo9Vm7OfFCBOSVbRzp1M1D1s_3rsvKaC7w6kku0=w120-h120-l90-rj">
+                        <a class="img">
+                            <img id="playbut" src="source/playbutton.png">
+                        </a>
+                        <span class="title">
+                            Shake It Off
+                        </span>
+                        <span class="grey">
+                            Taylor Swift
+                        </span>
+                        <span class="grey">
+                            39억회 재생
+                        </span>
+                        <span class="grey">
+                            1989 (Deluxe)
+                        </span>
+                        <span class="lhv">
+                            <span class="tired" id="hate">
+                                <img src="source/hate.png">
+                            </span>
+                            <span class="tired" id="like">
+                                <img src="source/like.png">
+                            </span>
+                            <span class="tired" id="vd">
+                                <img src="source/verticaldots.png">
+                            </span>
+                        </span>
+                        <span class="year">
+                            2014
+                        </span>
+                    </div>
+                    <hr class="between">
+                    <div class="songs">
+                        <img id="img" src="source/ttpd.png">
+                        <a class="img">
+                            <img id="playbut" src="source/playbutton.png">
+                        </a>
+                        <span class="title">
+                            Fortnight (feat. Post Malone)
+                        </span>
+                        <span class="grey">
+                            Taylor Swift
+                        </span>
+                        <span class="grey">
+                            1.3억회 재생
+                        </span>
+                        <span class="grey" id="ttpd">
+                            THE TORTURED POETS DEPARTMENT
+                        </span>
+                        <span class="lhv">
+                            <span class="tired" id="hate">
+                                <img src="source/hate.png">
+                            </span>
+                            <span class="tired" id="like">
+                                <img src="source/like.png">
+                            </span>
+                            <span class="tired" id="vd">
+                                <img src="source/verticaldots.png">
+                            </span>
+                        </span>
+                        <span class="year">
+                            2024
+                        </span>
+                    </div>
+                    <hr class="between">
+                    <div class="songs">
+                        <img id="img" src="source/lover.png">
+                        <a class="img">
+                            <img id="playbut" src="source/playbutton.png">
+                        </a>
+                        <span class="title">
+                            Cruel Summer
+                        </span>
+                        <span class="grey">
+                            Taylor Swift
+                        </span>
+                        <span class="grey">
+                            4.3억회 재생
+                        </span>
+                        <span class="grey">
+                            Lover
+                        </span>
+                        <span class="lhv">
+                            <span class="tired" id="hate">
+                                <img src="source/hate.png">
+                            </span>
+                            <span class="tired" id="like">
+                                <img src="source/like.png">
+                            </span>
+                            <span class="tired" id="vd">
+                                <img src="source/verticaldots.png">
+                            </span>
+                        </span>
+                        <span class="year">
+                            2019
+                        </span>
+                    </div>
+                    <hr class="between">
+                    <div class="songs" id="marginbottom">
+                        <img id="img" draggable="false" class="style-scope yt-img-shadow" alt="" width="56"
+                            src="https://lh3.googleusercontent.com/YEcmx-25aRBMaKNTvCx17QboP0KCJq2jqKdjpjLImqA60wWE2AZV_ZdQa417ZEmAkK7ipsEt1m0DEI-Z9A=w120-h120-l90-rj">
+                        <a class="img">
+                            <img id="playbut" src="source/playbutton.png">
+                        </a>
+                        <span class="title">
+                            You Belong With Me
+                        </span>
+                        <span class="grey">
+                            Taylor Swift
+                        </span>
+                        <span class="grey">
+                            19억회 재생
+                        </span>
+                        <span class="grey" id="ttpd">
+                            Fearless (Platinum Version)
+                        </span>
+                        <span class="lhv">
+                            <span class="tired" id="hate">
+                                <img src="source/hate.png">
+                            </span>
+                            <span class="tired" id="like">
+                                <img src="source/like.png">
+                            </span>
+                            <span class="tired" id="vd">
+                                <img src="source/verticaldots.png">
+                            </span>
+                        </span>
+                        <span class="year">
+                            2008
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="aside">
+        <span></span>
+        <div id="bts">
+            <div id="home">
+                <span class="icon">
+                    <svg viewBox="-6 0 40 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                        class="style-scope yt-icon">
+                        <g class="style-scope yt-icon">
+                            <path d="M12,4.33l7,6.12V20H15V14H9v6H5V10.45l7-6.12M12,3,4,10V21h6V15h4v6h6V10L12,3Z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                </span>
+                <span class="what">
+                    <span>홈</span>
+                </span>
+            </div>
+            <div id="explore">
+                <span class="icon">
+                    <svg viewBox="-6 0 40 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                        class="style-scope yt-icon">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M9.8,9.8l-3.83,8.23l8.23-3.83l3.83-8.23L9.8,9.8z M13.08,12.77c-0.21,0.29-0.51,0.48-0.86,0.54 c-0.07,0.01-0.15,0.02-0.22,0.02c-0.28,0-0.54-0.08-0.77-0.25c-0.29-0.21-0.48-0.51-0.54-0.86c-0.06-0.35,0.02-0.71,0.23-0.99 c0.21-0.29,0.51-0.48,0.86-0.54c0.35-0.06,0.7,0.02,0.99,0.23c0.29,0.21,0.48,0.51,0.54,0.86C13.37,12.13,13.29,12.48,13.08,12.77z M12,3c4.96,0,9,4.04,9,9s-4.04,9-9,9s-9-4.04-9-9S7.04,3,12,3 M12,2C6.48,2,2,6.48,2,12s4.48,10,10,10s10-4.48,10-10S17.52,2,12,2 L12,2z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                </span>
+                <span class="what">
+                    <span>둘러보기</span>
+                </span>
+            </div>
+            <div id="storage">
+                <span class="icon">
+                    <svg viewBox="-6 0 40 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                        style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                        class="style-scope yt-icon">
+                        <g class="style-scope yt-icon">
+                            <path
+                                d="M16,6v2h-2v5c0,1.1-0.9,2-2,2s-2-0.9-2-2s0.9-2,2-2c0.37,0,0.7,0.11,1,0.28V6H16z M18,20H4V6H3v15h15V20z M21,3H6v15h15V3z M7,4h13v13H7V4z"
+                                class="style-scope yt-icon"></path>
+                        </g>
+                    </svg>
+                </span>
+                <span class="what">
+                    <span>보관함</span>
+                </span>
+            </div>
+        </div>
+        <hr id="pl">
+        <div id="playlists">
+            <div id="new">
+                <svg viewBox="-0.5 -0.5 26 26" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                    class="style-scope yt-icon">
+                    <g class="style-scope yt-icon">
+                        <path d="M20,12h-8v8h-1v-8H3v-1h8V3h1v8h8V12z" class="style-scope yt-icon"></path>
+                    </g>
+                </svg>
+                <span id="des">새 재생목록</span>
+            </div>
+            <div id="old">
+                <div class="playlist" id="start">
+                    <span class="info">
+                        <span class="like">좋아요 표시한 음악</span>
+                        <span class="auto">
+                            <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                style="pointer-events: none; display: block; width: 12px; height: 16px;"
+                                class="style-scope yt-icon">
+                                <g class="style-scope yt-icon">
+                                    <path d="M17,2H7v1h1v8l-2,2v2h5v6l1,1l1-1v-6h5v-2l-2-2V3h1V2z"
+                                        class="style-scope yt-icon"></path>
+                                </g>
+                            </svg>
+                            <span>자동 재생목록</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">POP Songs</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">JPOP</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">KPOP</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+                <div class="playlist">
+                    <span class="info">
+                        <span class="like">Other</span>
+                        <span class="author">
+                            <!-- <span></span> -->
+                            <span>1307 방세준</span>
+                        </span>
+                    </span>
+                    <span class="play">
+                        <svg viewBox="-6 -6 36 36" preserveAspectRatio="xMidYMid meet" focusable="false"
+                            style="pointer-events: none; display: block; width: 100%; height: 100%;"
+                            class="style-scope yt-icon">
+                            <g class="style-scope yt-icon">
+                                <path d="M6,4l12,8L6,20V4z" class="style-scope yt-icon"></path>
+                            </g>
+                        </svg>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="header">
+        <img id="hamburger" src="source/hamburgericon.png">
+        <img id="headerlogo" src="source/youtubeIcon.ico">
+        <span id="headermusic">Music</span>
+
+        <span id="search">
+            <img id="searchicon" src="source/searchicon.png">
+            <span id="ph">노래, 앨범, 아티스트, 팟캐스트 검색</span>
+        </span>
+
+        <span>
+            <img id="profile" src="source/22.jpg">
+        </span>
+    </div>
+    <div id="barr">
+        <input id="bar" type="range" min="0" onchange="onchangeRange(this.value)">
+    </div>
+    <div id="playbar">
+        <div id="player">
+            <span id="back">
+                <img src="source/back.png">
+            </span>
+            <span id="playbutton" onclick="imgchange();">
+                <img src="source/playbutton.png">
+            </span>
+            <span id="next">
+                <img src="source/next.png">
+            </span>
+            <span id="time">
+                <span id="ct">00:00/</span>
+                <span id="at">00:00</span>
+            </span>
+        </div>
+        <div id="songinfo">
+            <span id="songcover">
+            </span>
+            <span id="info">
+                <span id="name" style="color: white;"></span><br>
+                <span id="other" style="color: rgba(144, 144, 144);"></span>
+            </span>
+            <span class="lhv2">
+                <span id="hate">
+                    <img src="source/hate.png">
+                </span>
+                <span id="like">
+                    <img src="source/like.png">
+                </span>
+                <span id="vd">
+                    <img src="source/verticaldots.png">
+                </span>
+            </span>
+        </div>
+        <span id="volumechange">
+            <input id="vol" type="range" min="0" max="100" oninput="vchange(this.value)">
+        </span>
+        <div id="settings">
+            <span id="volume">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;"
+                    class="style-scope tp-yt-iron-icon">
+                    <g class="style-scope tp-yt-iron-icon">
+                        <path
+                            d="M17.5,12c0,2.14-1.5,3.92-3.5,4.38v-1.04c1.44-0.43,2.5-1.76,2.5-3.34c0-1.58-1.06-2.9-2.5-3.34V7.62 C16,8.08,17.5,9.86,17.5,12z M12,4.07v15.86L6.16,15H3V9h3.16L12,4.07z M11,6.22L6.52,10H4v4h2.52L11,17.78V6.22z M21,12 c0,4.08-3.05,7.44-7,7.93v-1.01c3.39-0.49,6-3.4,6-6.92s-2.61-6.43-6-6.92V4.07C17.95,4.56,21,7.92,21,12z"
+                            class="style-scope tp-yt-iron-icon"></path>
+                    </g>
+                </svg>
+            </span>
+            <span id="repeat">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;"
+                    class="style-scope tp-yt-iron-icon">
+                    <g class="style-scope tp-yt-iron-icon">
+                        <path
+                            d="M21,13h1v5L3.93,18.03l2.62,2.62l-0.71,0.71L1.99,17.5l3.85-3.85l0.71,0.71l-2.67,2.67L21,17V13z M3,7l17.12-0.03 l-2.67,2.67l0.71,0.71l3.85-3.85l-3.85-3.85l-0.71,0.71l2.62,2.62L2,6v5h1V7z"
+                            class="style-scope tp-yt-iron-icon"></path>
+                    </g>
+                </svg>
+            </span>
+            <span id="shuf">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 24px; height: 24px;"
+                    class="style-scope tp-yt-iron-icon">
+                    <g class="style-scope tp-yt-iron-icon">
+                        <path
+                            d="M18.15,13.65l3.85,3.85l-3.85,3.85l-0.71-0.71L20.09,18H19c-2.84,0-5.53-1.23-7.39-3.38l0.76-0.65 C14.03,15.89,16.45,17,19,17h1.09l-2.65-2.65L18.15,13.65z M19,7h1.09l-2.65,2.65l0.71,0.71l3.85-3.85l-3.85-3.85l-0.71,0.71 L20.09,6H19c-3.58,0-6.86,1.95-8.57,5.09l-0.73,1.34C8.16,15.25,5.21,17,2,17v1c3.58,0,6.86-1.95,8.57-5.09l0.73-1.34 C12.84,8.75,15.79,7,19,7z M8.59,9.98l0.75-0.66C7.49,7.21,4.81,6,2,6v1C4.52,7,6.92,8.09,8.59,9.98z"
+                            class="style-scope tp-yt-iron-icon"></path>
+                    </g>
+                </svg>
+            </span>
+            <span id="unfold">
+                <img src="source/unfold.png">
+            </span>
+        </div>
+    </div>
+    <div id="song">
+        <div id=""></div>
+    </div>
+    </div>
+    <script>
+        let audio = new Audio('');
+        audio.type = 'audio/mp3'
+        let songs = document.querySelectorAll(".songs");
+        let playing = 50;
+        let firstVol = 0.5;
+
+        let playlist = document.querySelectorAll(".playlist");
+        document.querySelector('#vol').value = firstVol * 100;
+        audio.volume = firstVol;
+        [].forEach.call(playlist, function (i) {
+            i.addEventListener('mouseover', () => {
+                i.querySelector('.play').style.display = 'block';
+            })
+            i.addEventListener('mouseout', () => {
+                i.querySelector('.play').style.display = 'none';
+            })
+        });
+
+        [].forEach.call(songs, function (i) {
+            i.addEventListener('mouseover', () => {
+                i.querySelector(`.songs .lhv`).style.display = 'grid';
+                i.querySelector(`.songs #img`).style.filter = 'brightness(15%)';
+                i.querySelector(`.img`).style.display = 'grid';
+            })
+            i.addEventListener('mouseout', () => {
+                i.querySelector(`.songs #img`).style.filter = 'brightness(100%)';
+                i.querySelector(`.songs .lhv`).style.display = 'none';
+                i.querySelector(`.img`).style.display = 'none';
+            })
+        })
+
+        let title = document.querySelectorAll(".title");
+        [].forEach.call(title, function (i) {
+            playing = 1;
+            i.addEventListener('click', () => {
+                playing = 1;
+                if (playing == 1) {
+                    document.querySelector("#playbutton img").setAttribute('src', 'source/pause.png');
+                }
+                let name = i.innerText;
+                audio.src = `./source/songs/${name}.mp3`
+                audio.load();
+                audio.play();
+                document.querySelector('#songcover').innerHTML = `<img src='${i.parentNode.querySelector('#img').getAttribute('src')}'>`;
+                document.querySelector('#name').innerText = i.innerText;
+                let other = i.parentNode.querySelectorAll('.grey');
+                document.querySelector('#other').innerHTML = ' ';
+                [].forEach.call(other, function (j) {
+                    document.querySelector('#other').innerHTML += ' ' + j.innerText + ' •';
+                })
+                document.querySelector('#other').innerHTML += ' ' + i.parentNode.querySelector('.year').innerText;
+                // console.log();
+                // i.parentNode.parentNode.style.backgroundColor = 'rgba(144, 144, 144)'
+            })
+        })
+        let playbutton = document.querySelectorAll("#playbut");
+        [].forEach.call(playbutton, function (i) {
+            playing = 1;
+            i.addEventListener('click', () => {
+                playing = 1;
+                if (playing == 1) {
+                    document.querySelector("#playbutton img").setAttribute('src', 'source/pause.png');
+                }
+                let name = i.parentNode.parentNode;
+                name = name.querySelector(".title").innerText;
+                audio.src = `./source/songs/${name}.mp3`
+                audio.load();
+                audio.play();
+                document.querySelector('#songcover').innerHTML = `<img src='${i.parentNode.parentNode.querySelector('#img').getAttribute('src')}'>`;
+                document.querySelector('#name').innerText = i.parentNode.parentNode.querySelector('.title').innerText;
+                let other = i.parentNode.parentNode.querySelectorAll('.grey');
+                document.querySelector('#other').innerHTML = ' ';
+                [].forEach.call(other, function (j) {
+                    document.querySelector('#other').innerHTML += ' ' + j.innerText + ' •';
+                })
+                document.querySelector('#other').innerHTML += ' ' + i.parentNode.parentNode.querySelector('.year').innerText;
+            })
+        })
+        let cover = document.querySelectorAll('.songs #img');
+        [].forEach.call(cover, function (i) {
+            i.addEventListener('click', () => {
+                playing = 1;
+                if (playing == 1) {
+                    document.querySelector("#playbutton img").setAttribute('src', 'source/pause.png');
+                }
+                let name = i.parentNode;
+                name = name.querySelector(".title").innerText;
+                audio.src = `./source/songs/${name}.mp3`
+                audio.load();
+                audio.play();
+                document.querySelector('#songcover').innerHTML = `<img src='${i.getAttribute('src')}'>`;
+                document.querySelector('#name').innerText = i.parentNode.querySelector('.title').innerText;
+                let other = i.parentNode.querySelectorAll('.grey');
+                document.querySelector('#other').innerHTML = ' ';
+                [].forEach.call(other, function (j) {
+                    document.querySelector('#other').innerHTML += ' ' + j.innerText + ' •';
+                })
+                document.querySelector('#other').innerHTML += ' ' + i.parentNode.querySelector('.year').innerText;
+
+            })
+            if (!audio.paused) {
+                i.style.filter = 'brightness(15%)';
+            }
+        })
+        document.querySelector("#bar").setAttribute('max', audio.duration);
+        document.querySelector("#bar").value = audio.currentTime;
+        document.querySelector("#ct").innerText = `${String(parseInt(audio.currentTime / 60)).padStart(2, '0')}:${String(parseInt(audio.currentTime % 60)).padStart(2, '0')}/`;
+        document.querySelector("#at").innerText = `${!audio.duration ? '00' : String(parseInt(audio.duration / 60)).padStart(2, '0')}:${!audio.duration ? '00' : String(parseInt(audio.duration % 60)).padStart(2, '0')}`;
+        if (playing == 1) {
+            setInterval(function () {
+                document.querySelector("#bar").setAttribute('max', audio.duration);
+                document.querySelector("#bar").value = audio.currentTime;
+                document.querySelector("#ct").innerText = `${String(parseInt(audio.currentTime / 60)).padStart(2, '0')}:${String(parseInt(audio.currentTime % 60)).padStart(2, '0')}/`;
+                document.querySelector("#at").innerText = `${!audio.duration ? '00' : String(parseInt(audio.duration / 60)).padStart(2, '0')}:${!audio.duration ? '00' : String(parseInt(audio.duration % 60)).padStart(2, '0')}`;
+            }, 1000);
+        }
+
+        document.querySelector('#section').addEventListener('wheel', function () {
+            const scroll = Math.max(document.documentElement.scrollTop, document.querySelector('#section').scrollTop);
+            const header = document.getElementById('header');
+            if (scroll == 0) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+                header.style.borderStyle = 'none';
+            } else {
+                header.style.borderStyle = 'solid';
+                header.style.backgroundColor = `rgba(0, 0, 0, ${scroll / 15})`;
+            }
+        })
+        document.querySelector('#section').addEventListener('mouseover', function () {
+            document.querySelector('#volumechange').style.display = 'none';
+        })
+        document.querySelector('#aside').addEventListener('mouseover', function () {
+            document.querySelector('#volumechange').style.display = 'none';
+        })
+
+        document.querySelector('#old').addEventListener('wheel', function (i) {
+            document.body.style.overflow = 'hidden';
+        })
+        document.querySelector('#old').addEventListener('mouseout', function () {
+            document.body.style.overflow = 'auto';
+        })
+        document.querySelector("#volume").addEventListener('mouseover', function () {
+            document.querySelector('#volumechange').style.display = 'grid';
+        })
+        document.querySelector("#volume").addEventListener('click', function () {
+            // console.log(firstVol);
+            if (audio.volume == 0) {
+                document.querySelector('#volume').innerHTML = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 24px; height: 24px;" class="style-scope tp-yt-iron-icon"><g class="style-scope tp-yt-iron-icon"><path d="M17.5,12c0,2.14-1.5,3.92-3.5,4.38v-1.04c1.44-0.43,2.5-1.76,2.5-3.34c0-1.58-1.06-2.9-2.5-3.34V7.62 C16,8.08,17.5,9.86,17.5,12z M12,4.07v15.86L6.16,15H3V9h3.16L12,4.07z M11,6.22L6.52,10H4v4h2.52L11,17.78V6.22z M21,12 c0,4.08-3.05,7.44-7,7.93v-1.01c3.39-0.49,6-3.4,6-6.92s-2.61-6.43-6-6.92V4.07C17.95,4.56,21,7.92,21,12z" class="style-scope tp-yt-iron-icon"></path></g></svg>';
+                document.querySelector('#vol').value = firstVol * 100;
+                audio.volume = firstVol;
+            } else {
+                document.querySelector('#volume').innerHTML = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 24px; height: 24px;" class="style-scope tp-yt-iron-icon"><g class="style-scope tp-yt-iron-icon"><path d="M3.15,3.85l4.17,4.17L6.16,9H3v6h3.16L12,19.93v-7.22l2.45,2.45c-0.15,0.07-0.3,0.13-0.45,0.18v1.04 c0.43-0.1,0.83-0.27,1.2-0.48l1.81,1.81c-0.88,0.62-1.9,1.04-3.01,1.2v1.01c1.39-0.17,2.66-0.71,3.73-1.49l2.42,2.42l0.71-0.71 l-17-17L3.15,3.85z M11,11.71v6.07L6.52,14H4v-4h2.52l1.5-1.27L11,11.71z M10.33,6.79L9.62,6.08L12,4.07v4.39l-1-1V6.22L10.33,6.79 z M14,8.66V7.62c2,0.46,3.5,2.24,3.5,4.38c0,0.58-0.13,1.13-0.33,1.64l-0.79-0.79c0.07-0.27,0.12-0.55,0.12-0.85 C16.5,10.42,15.44,9.1,14,8.66z M14,5.08V4.07c3.95,0.49,7,3.85,7,7.93c0,1.56-0.46,3.01-1.23,4.24l-0.73-0.73 C19.65,14.48,20,13.28,20,12C20,8.48,17.39,5.57,14,5.08z" class="style-scope tp-yt-iron-icon"></path></g></svg>';
+                document.querySelector('#vol').value = 0;
+                firstVol = audio.volume;
+                audio.volume = 0;
+            }
+        })
+        document.querySelector("#playbar").addEventListener('mouseover', function () {
+            if (document.querySelector('#volumechange').style.display == 'grid') {
+                document.querySelector("#volumechange").style.display = 'grid';
+            }
+        })
+
+        function vchange(value) {
+            if (value == 0) {
+                document.querySelector('#volume').innerHTML = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 24px; height: 24px;" class="style-scope tp-yt-iron-icon"><g class="style-scope tp-yt-iron-icon"><path d="M3.15,3.85l4.17,4.17L6.16,9H3v6h3.16L12,19.93v-7.22l2.45,2.45c-0.15,0.07-0.3,0.13-0.45,0.18v1.04 c0.43-0.1,0.83-0.27,1.2-0.48l1.81,1.81c-0.88,0.62-1.9,1.04-3.01,1.2v1.01c1.39-0.17,2.66-0.71,3.73-1.49l2.42,2.42l0.71-0.71 l-17-17L3.15,3.85z M11,11.71v6.07L6.52,14H4v-4h2.52l1.5-1.27L11,11.71z M10.33,6.79L9.62,6.08L12,4.07v4.39l-1-1V6.22L10.33,6.79 z M14,8.66V7.62c2,0.46,3.5,2.24,3.5,4.38c0,0.58-0.13,1.13-0.33,1.64l-0.79-0.79c0.07-0.27,0.12-0.55,0.12-0.85 C16.5,10.42,15.44,9.1,14,8.66z M14,5.08V4.07c3.95,0.49,7,3.85,7,7.93c0,1.56-0.46,3.01-1.23,4.24l-0.73-0.73 C19.65,14.48,20,13.28,20,12C20,8.48,17.39,5.57,14,5.08z" class="style-scope tp-yt-iron-icon"></path></g></svg>';
+            } else {
+                document.querySelector('#volume').innerHTML = '<svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 24px; height: 24px;" class="style-scope tp-yt-iron-icon"><g class="style-scope tp-yt-iron-icon"><path d="M17.5,12c0,2.14-1.5,3.92-3.5,4.38v-1.04c1.44-0.43,2.5-1.76,2.5-3.34c0-1.58-1.06-2.9-2.5-3.34V7.62 C16,8.08,17.5,9.86,17.5,12z M12,4.07v15.86L6.16,15H3V9h3.16L12,4.07z M11,6.22L6.52,10H4v4h2.52L11,17.78V6.22z M21,12 c0,4.08-3.05,7.44-7,7.93v-1.01c3.39-0.49,6-3.4,6-6.92s-2.61-6.43-6-6.92V4.07C17.95,4.56,21,7.92,21,12z" class="style-scope tp-yt-iron-icon"></path></g></svg>';
+            }
+            audio.volume = value / 100;
+        }
+        function imgchange() {
+            if (document.querySelector(`#playbutton>img`).src == 'http://127.0.0.1:5500/%ED%81%B4%EB%A1%A0%EC%BD%94%EB%94%A9/YoutubeMusicClone/source/playbutton.png') {
+                audio.play();
+                document.querySelector(`#playbutton>img`).setAttribute('src', 'source/pause.png');
+            } else {
+                audio.pause();
+                document.querySelector(`#playbutton>img`).setAttribute('src', 'source/playbutton.png');
+            }
+        }
+        function detail() {
+            document.getElementById("moreinfo").style.display = 'none';
+            document.getElementById("reduce").style.display = 'block';
+            const text = document.getElementById("detail");
+            text.style['-webkit-line-clamp'] = 15;
+        }
+        function reduce() {
+            document.getElementById("moreinfo").style.display = 'block';
+            document.getElementById("reduce").style.display = 'none';
+            const text = document.getElementById("detail");
+            text.style['-webkit-line-clamp'] = 2;
+        }
+        function onchangeRange(value) {
+            audio.currentTime = value;
+        }
+    </script>
+</body>
+
+</html>
